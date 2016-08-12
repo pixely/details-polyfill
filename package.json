@@ -1,14 +1,14 @@
 {
-  "name": "details-polyfill",
+  "name": "details-polyfill-es6",
   "version": "1.0.0",
   "description": "A simple ES6 polyfill for the <details> element",
-  "main": "src/details-polyfill.js",
+  "main": "src/details-polyfill-es6.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://pixely@github.com/pixely/details-polyfill.git"
+    "url": "git+https://pixely@github.com/pixely/details-polyfill-es6.git"
   },
   "keywords": [
     "details",
@@ -20,9 +20,9 @@
   "author": "Graham Martin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pixely/details-polyfill/issues"
+    "url": "https://github.com/pixely/details-polyfill-es6/issues"
   },
-  "homepage": "https://github.com/pixely/details-polyfill#readme",
+  "homepage": "https://github.com/pixely/details-polyfill-es6#readme",
   "dependencies": {
     "eslint": "^3.2.2",
     "eslint-config-airbnb": "^10.0.0",
