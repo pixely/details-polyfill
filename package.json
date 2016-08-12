@@ -1,0 +1,26 @@
+{
+  "name": "details-polyfill",
+  "version": "1.0.0",
+  "description": "A simple ES6 polyfill for the <details> element",
+  "main": "src/details-polyfill.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://pixely@github.com/pixely/details-polyfill.git"
+  },
+  "keywords": [
+    "details",
+    "polyfill",
+    "js",
+    "es6",
+    "html5"
+  ],
+  "author": "Graham Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pixely/details-polyfill/issues"
+  },
+  "homepage": "https://github.com/pixely/details-polyfill#readme"
+}
