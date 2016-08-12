@@ -2,37 +2,11 @@
  * Add support for details element for browsers which require it
  *
  * @author Graham Martin <graham@pixely.co.uk>
- * @version 1.0
  */
 
 export default (function Details() {
-  // Adapted to ES6 from the following code by @mathiasbynens
-  // https://mathiasbynens.be/notes/html5-details-jquery#comment-35
-  const isDetailsSupported = (function isDetailsSupported(doc) {
-    const el = doc.createElement('details');
-    let fake;
-    let diff;
-
-    if (!('open' in el)) {
-      return false;
-    }
-    const root = doc.body || (() => {
-      const de = doc.documentElement;
-      fake = true;
-      return de.insertBefore(doc.createElement('body'), de.firstElementChild || de.firstChild);
-    });
-    el.innerHTML = '<summary>a</summary>b';
-    el.style.display = 'block';
-    root.appendChild(el);
-    diff = el.offsetHeight;
-    el.open = true;
-    diff = diff !== el.offsetHeight;
-    root.removeChild(el);
-    if (fake) {
-      root.parentNode.removeChild(root);
-    }
-    return diff;
-  }(document));
+  // Check for details element support
+  const isDetailsSupported = ('open' in document.createElement('details'));
 
   const toggleOpen = function toggleOpen() {
     const parent = this.parentNode;
