@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb/base",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "no-var": 1,
+    "prefer-const": 1,
+    "no-labels": 1,
+    "keyword-spacing": 1,
+    "no-empty-label": 0,
+    "space-after-keywords": 0,
+    "space-return-throw-case": 0
+  }
+}

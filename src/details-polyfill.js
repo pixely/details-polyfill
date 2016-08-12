@@ -5,8 +5,6 @@
  * @version 1.0
  */
 
-'use strict';
-
 export default (function Details() {
   // Adapted to ES6 from the following code by @mathiasbynens
   // https://mathiasbynens.be/notes/html5-details-jquery#comment-35
@@ -19,10 +17,10 @@ export default (function Details() {
       return false;
     }
     const root = doc.body || (() => {
-          const de = doc.documentElement;
-    fake = true;
-    return de.insertBefore(doc.createElement('body'), de.firstElementChild || de.firstChild);
-  });
+      const de = doc.documentElement;
+      fake = true;
+      return de.insertBefore(doc.createElement('body'), de.firstElementChild || de.firstChild);
+    });
     el.innerHTML = '<summary>a</summary>b';
     el.style.display = 'block';
     root.appendChild(el);
@@ -64,10 +62,10 @@ export default (function Details() {
       summary.addEventListener('click', toggleOpen);
       summary.addEventListener('keypress', (e) => {
         const key = e.which || e.keyCode;
-      if (key === 13 || key === 32) { // enter or space keys
-        toggleOpen.apply(e.target);
-      }
-    });
+        if (key === 13 || key === 32) { // enter or space keys
+          toggleOpen.apply(e.target);
+        }
+      });
     }
   }
 }());
