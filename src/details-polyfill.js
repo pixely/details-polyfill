@@ -52,7 +52,7 @@ export default (function Details() {
     }
     
     .no-details details[open] > *:not(summary) {
-      /* If you need to display table or something like that feel free* /
+      /* If you need to display table or something like that feel free */
       display: block;
     }`;
 
