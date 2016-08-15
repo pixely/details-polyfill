@@ -33,7 +33,7 @@ import 'details-polyfill-es6';
 
 The polyfill injects some basic CSS to mimic the functionality of the `<details>` element alongside additional attributes on the markup to increase the accessibility of the markup. The JavaScript listens for clicks and keypresses on the `<summary>` element and toggles the `open` attribute on the parent `<details>` element.
 
-You may override the basic styles in CSS to suit your own designs, with `details[open]` allowing you to style the open start of the `<details>` element.
+You may override the basic styles in CSS to suit your own designs, with `details[open]` allowing you to style the open state of the `<details>` element.
 
 ## Credits
 
@@ -42,4 +42,3 @@ This polyfill uses various fragments of code and learnings from a few existing p
 * https://github.com/leifoolsen/lavu-details-polyfill
 * https://github.com/jordanaustin/Details-Expander
 * https://mathiasbynens.be/notes/html5-details-jquery#comment-35
-
