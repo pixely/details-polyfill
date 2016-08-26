@@ -1,7 +1,7 @@
 {
   "name": "details-polyfill-es6",
   "version": "1.0.9",
-  "description": "A simple ES6 polyfill for the <details> element",
+  "description": "A simple ES6 polyfill for the details element",
   "main": "dist/details-polyfill.js",
   "scripts": {
     "test": "test"
