@@ -94,8 +94,20 @@ export default (function Details() {
   injectStyles();
 
   // Grab references to the detail DOM elements
+  const details = document.querySelectorAll('details');
   const summaries = document.querySelectorAll('summary');
+  let detail;
   let summary;
+
+  if (details) {
+    for (detail of details) {
+      if (!detail.childNodes.find('summary')) {
+        summary = document.createElement('summary');
+        summary.textContent = 'Details';
+        detail.insertBefore(summary, detail.firstChild);
+      }
+    }
+  }
 
   // Iterate over all summary elements, set accessibility focused attributes and
   // set event listeners for clicks or keypresses

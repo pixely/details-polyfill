@@ -54,19 +54,52 @@ exports.default = function Details() {
   injectStyles();
 
   // Grab references to the detail DOM elements
+  var details = document.querySelectorAll('details');
   var summaries = document.querySelectorAll('summary');
+  var detail = void 0;
   var summary = void 0;
 
-  // Iterate over all summary elements, set accessibility focused attributes and
-  // set event listeners for clicks or keypresses
-  if (summaries) {
+  if (details) {
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;
     var _iteratorError = undefined;
 
     try {
-      for (var _iterator = summaries[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        summary = _step.value;
+      for (var _iterator = details[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        detail = _step.value;
+
+        if (!detail.childNodes.find('summary')) {
+          summary = document.createElement('summary');
+          summary.textContent = 'Details';
+          detail.insertBefore(summary, detail.firstChild);
+        }
+      }
+    } catch (err) {
+      _didIteratorError = true;
+      _iteratorError = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion && _iterator.return) {
+          _iterator.return();
+        }
+      } finally {
+        if (_didIteratorError) {
+          throw _iteratorError;
+        }
+      }
+    }
+  }
+
+  // Iterate over all summary elements, set accessibility focused attributes and
+  // set event listeners for clicks or keypresses
+  if (summaries) {
+    var _iteratorNormalCompletion2 = true;
+    var _didIteratorError2 = false;
+    var _iteratorError2 = undefined;
+
+    try {
+      for (var _iterator2 = summaries[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+        summary = _step2.value;
 
         summary.setAttribute('role', 'button');
         summary.setAttribute('tabindex', 0);
@@ -80,16 +113,16 @@ exports.default = function Details() {
         });
       }
     } catch (err) {
-      _didIteratorError = true;
-      _iteratorError = err;
+      _didIteratorError2 = true;
+      _iteratorError2 = err;
     } finally {
       try {
-        if (!_iteratorNormalCompletion && _iterator.return) {
-          _iterator.return();
+        if (!_iteratorNormalCompletion2 && _iterator2.return) {
+          _iterator2.return();
         }
       } finally {
-        if (_didIteratorError) {
-          throw _iteratorError;
+        if (_didIteratorError2) {
+          throw _iteratorError2;
         }
       }
     }
