@@ -1,16 +1,18 @@
 const gulp = require('gulp');
+const webpack = require('webpack');
+const gutil = require('gulp-util');
 const eslint = require('gulp-eslint');
-const sourcemaps = require('gulp-sourcemaps');
-const babel = require('gulp-babel');
-const concat = require('gulp-concat');
+const webpackConfig = require('./webpack.config');
 
-gulp.task('script', () => {
-  gulp.src('src/**/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(babel())
-    .pipe(concat('details-polyfill.js'))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist'));
+gulp.task('script', (done) => {
+  webpack(webpackConfig).run((err, stats) => {
+    if (err) {
+      gutil.log(gutil.colors.red(err));
+    } else {
+      gutil.log(stats.toString());
+    }
+    done();
+  });
 });
 
 gulp.task('lint', () => {
