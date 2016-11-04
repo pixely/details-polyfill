@@ -62,7 +62,7 @@ export default (function Details() {
     const style = document.createElement('style');
     style.id = 'details-polyfill-css';
     style.textContent = css
-        .replace(/(\/\*([^*]|(\*+[^*\/]))*\*+\/)/gm, '')
+        .replace(/(\/\*([^*]|(\*+[^*/]))*\*+\/)/gm, '')
         .replace(/\s/gm, ' ');
     style.appendChild(document.createTextNode(''));
 
