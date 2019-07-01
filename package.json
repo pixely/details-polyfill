@@ -31,7 +31,7 @@
     "eslint-plugin-react": "^6.0.0",
     "gulp": "^3.9.1",
     "gulp-util": "^3",
-    "gulp-eslint": "^3.0.1",
+    "gulp-eslint": "^6.0.0",
     "webpack": "^1.13.3"
   },
   "devDependencies": {
